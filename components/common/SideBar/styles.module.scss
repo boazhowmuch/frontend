@@ -1,0 +1,49 @@
+$main-color: #5A6ACF;
+
+.sideBarContainer {
+	position: fixed;
+	left:0;
+	right: 0;
+	bottom: 0;
+	width: 280px;
+	height: 100%;	background-color: rgba(133, 147, 237, 0.17);
+	margin: 0;
+	z-index: 100;
+}
+
+.logoBox {
+	display: flex;
+	// padding-top: 5px;
+	// margin-bottom: 100px;
+	// margin-left: auto;
+	margin: 5px 0 100px 50px;
+	align-items: center;
+}
+
+.serivceName {
+	font-size: 20px;
+	font-weight: bolder;
+	color: $main-color;
+	padding-left: 7px;
+}
+
+.menuBar {
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+	margin-left: 30px;
+	width: 220px;
+	height: 200px;
+}
+
+.menuBox {
+	display: flex;
+	align-items: center;
+	border: #5A6ACF 1px solid;
+}
+
+.menuIcon {
+	margin-left: 10px;
+}
+
+
