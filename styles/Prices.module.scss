@@ -1,17 +1,9 @@
-// .container {
-// 	display: flex;
-// 	justify-content: space-evenly;
-// }
+$gray-color: #808080;
 
 .body {
-	padding-left: 320px; // sideBar의 width 이상
+	margin-left: 320px; // sideBar의 width 이상
+	margin-right: 40px;
 }
-
-// .testdiv {
-// 	width: 200px;
-// 	height: 700px;
-// 	background-color: red;
-// }
 
 .titleBox {
 	margin: 23px 0;
@@ -20,10 +12,45 @@
 .pageTitle {
 	margin: 0;
 	font-weight: 500;
+	white-space: nowrap;
 }
 
 .pageDescription {
 	font-size: small;
-	color: #808080;
+	color: $gray-color;
+	white-space: nowrap;
 }
 
+.date {
+	font-size: small;
+	color: $gray-color;
+	margin-top: 50px;
+	margin-bottom: 35px;
+}
+
+.optionBar {
+	display: flex;
+	align-items: center;
+}
+
+.period {
+	display: flex;
+	align-items: center;
+	margin-right: 30px;
+}
+
+.product {
+	display: flex;
+	align-items: center;
+	margin-right: 30px;
+}
+
+.species {
+	display: flex;
+	align-items: center;
+}
+
+.optionName {
+	white-space: nowrap;
+	margin-right: 30px;
+}
