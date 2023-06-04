@@ -1,5 +1,5 @@
 import styles from "@styles/Prices.module.scss";
-import SideBar from "components/common/SideBar";
+import SideBar from "components/SideBar";
 
 const Prices = () => {
   return (
