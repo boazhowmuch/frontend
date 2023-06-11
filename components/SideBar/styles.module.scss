@@ -13,10 +13,7 @@ $main-color: #5A6ACF;
 
 .logoBox {
 	display: flex;
-	// padding-top: 5px;
-	// margin-bottom: 100px;
-	// margin-left: auto;
-	margin: 5px 0 100px 50px;
+	margin: 5px 0 100px 48px;
 	align-items: center;
 }
 
@@ -33,17 +30,36 @@ $main-color: #5A6ACF;
 	justify-content: space-between;
 	margin-left: 30px;
 	width: 220px;
-	height: 200px;
+	height: 120px;
 }
 
 .menuBox {
+	padding-top: 15px;
+	padding-bottom: 15px;
+	padding-right: 88px;
+	cursor: pointer;
 	display: flex;
 	align-items: center;
-	border: #5A6ACF 1px solid;
+	border: none;
+	border-radius: 5px;
+	background: none;
+
+	color: #757D8B;
+	font-family: NanumSquareRound;
+	font-weight:400;
+	font-size: 16px;
+	line-height: 12px;
+	letter-spacing: 0.5px;
+
+	&:hover {
+		background: rgba(112, 127, 221, 0.1);
+		color: #5A6ACF;
+	}
 }
 
 .menuIcon {
-	margin-left: 10px;
+	margin-left: 20px;
+	margin-right: 20px;
 }
 
 
