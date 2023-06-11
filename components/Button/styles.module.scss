@@ -11,5 +11,12 @@ $clicked-font-color: #5A6ACF;
 	background: $unclicked-bg-color;
 	color: $unclicked-font-color;
 	margin: 0 7px;
+	cursor: pointer;
+
+	&:hover, &:focus {
+		background-color: $clicked-bg-color;
+		color: $clicked-font-color;
+	}
+
 }
 
