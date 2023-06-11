@@ -3,6 +3,7 @@ $gray-color: #808080;
 .body {
 	margin-left: 320px; // sideBar의 width 이상
 	margin-right: 40px;
+	overflow-x: scroll;
 }
 
 .titleBox {
@@ -26,6 +27,7 @@ $gray-color: #808080;
 	color: $gray-color;
 	margin-top: 50px;
 	margin-bottom: 35px;
+	white-space: nowrap;
 }
 
 .optionBar {
@@ -53,4 +55,12 @@ $gray-color: #808080;
 .optionName {
 	white-space: nowrap;
 	margin-right: 30px;
+}
+
+.table {
+	margin: 50px 0;
+}
+
+.tableName {
+	color: #5A6ACF;
 }

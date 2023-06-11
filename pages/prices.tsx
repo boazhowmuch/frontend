@@ -1,6 +1,8 @@
 import styles from "@styles/Prices.module.scss";
 import Button from "components/Button";
+import Dropdown from "components/Dropdown";
 import SideBar from "components/SideBar";
+import StickyHeadTable from "components/Table";
 
 const Prices = () => {
   return (
@@ -24,11 +26,21 @@ const Prices = () => {
           </div>
           <div className={styles.product}>
             <div className={styles.optionName}>품목</div>
+            <Dropdown/>
           </div>
           <div className={styles.species}>
             <div className={styles.optionName}>품종</div>
+            <Dropdown/>
           </div>
         </div>
+       <div className={styles.table}>
+        <h3 className={styles.tableName}>품종별 정보</h3>
+        <StickyHeadTable/>
+       </div>
+       <div className={styles.table}>
+        <h3 className={styles.tableName}>등급별 정보</h3>
+        <StickyHeadTable/>
+       </div>
       </div>
     </>
   );
