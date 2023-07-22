@@ -9,7 +9,19 @@ const nextConfig = {
     });
 
     return config;
-  }
+  },
+
+  async redirects() {
+    return [
+      {
+        source: '/api/:path*',
+        destination: `http://43.201.117.177:3000/:path*`,
+        permanent: true,
+      },
+    ]
+  },
+
+  
 }
 
 module.exports = nextConfig

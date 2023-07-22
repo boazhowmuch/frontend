@@ -1,0 +1,30 @@
+$main-color: #5A6ACF;
+
+.headerBox {
+	width: 100%;
+	height: fit-content;
+	background-color: rgba(133, 147, 237, 0.17);
+	position: fixed;
+  top: 0;
+	align-items: center;
+}
+
+.logoBox {
+	display: flex;
+	width: fit-content;
+	margin-left: 30px;
+}
+
+.link {
+	display: flex;
+	align-items: center;
+}
+
+.serivceName {
+	font-size: 20px;
+	font-weight: bolder;
+	color: $main-color;
+	padding-top: 3px;
+	padding-left: 7px;
+}
+
