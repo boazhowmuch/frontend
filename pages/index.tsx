@@ -1,25 +1,10 @@
 import Head from "next/head";
-import Image from "next/image";
 import styles from "@/styles/Home.module.scss";
-import axios from "axios";
-import SideBar from "components/SideBar";
 import Header from "components/Header";
+import Link from "next/link";
 
 export default function Home() {
 
-  const getLogin = () => {
-    axios
-      .post("/api/login", {
-        username: "test",
-        password: "test"
-      })
-      .then((res) => {
-        console.log(res.data);
-      })
-      .catch((err) => {
-        console.log(err);
-      });
-  };
 
   return (
     <>
@@ -27,10 +12,24 @@ export default function Home() {
         <title>How-much</title>
         <link rel="icon" href="/favicon.ico" />
       </Head>
-      <Header/>
-      <h1>How-much</h1>
-      <p>이 꽃 얼마에요?</p>
-      <button onClick={getLogin}>로그인</button>
+      <Header />
+      <h2 style={{ textAlign: "center", fontWeight: 400 }}>꽃 사입 챗봇 서비스</h2>
+      <div
+        style={{
+          display: "flex",
+          justifyContent: "center",
+          alignContent: "center",
+        }}
+      >
+        <Link
+          href="/login"
+          style={{ textDecoration: "none" }}
+        >
+          <button className={styles.button}>
+            로그인 하러가기
+          </button>
+        </Link>
+      </div>
     </>
   );
 }

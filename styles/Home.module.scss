@@ -1,4 +1,23 @@
+$unclicked-bg-color: #F1F3F5;
+$clicked-bg-color: rgba(133, 147, 237, 0.17);
+$unclicked-font-color: #757D8B;
+$clicked-font-color: #5A6ACF;
 
-.logo {
-	
+.button {
+	width: fit-content;
+	padding: 5px 10px;
+	border: none;
+	border-radius: 5px;
+	background: $unclicked-bg-color;
+	color: $unclicked-font-color;
+	margin: 0 7px;
+	cursor: pointer;
+	left: 50%;
+
+	&:hover, &:focus {
+		background-color: $clicked-bg-color;
+		color: $clicked-font-color;
+	}
+
 }
+
