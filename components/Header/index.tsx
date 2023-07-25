@@ -1,6 +1,6 @@
 import Link from "next/link";
 import styles from "./styles.module.scss";
-import { Logo, MoneyGraphIcon } from "@images/index";
+import { Logo } from "@images/index";
 
 function Header() {
   return (

@@ -15,13 +15,11 @@ const nextConfig = {
     return [
       {
         source: '/api/:path*',
-        destination: `http://43.201.117.177:3000/:path*`,
+        destination: `http://43.201.117.177:80/:path*`,
         permanent: true,
       },
     ]
   },
-
-  
 }
 
 module.exports = nextConfig
