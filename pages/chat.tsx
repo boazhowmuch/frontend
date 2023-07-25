@@ -16,16 +16,20 @@ const Chat = () => {
     let userChat = textBox.current ? textBox.current.value : "";
     setUserChat(userChat);
     setChatList((prev) => [...prev, userChat]);
-    // axios
-    // 	.post("http://43.201.117.177:80/send_message", {
-    // 		message: "꽃을 사입하려고 해."
-    // 	})
-    // 	.then((res) => {
-    // 		console.log(res.data);
-    // 	})
-    // 	.catch((err) => {
-    // 		console.log(err);
-    // 	});
+
+    axios
+    	.post("https://boazhowmuch.com/send_message", {
+    		message: "2023.12.31"
+    	}, {
+        withCredentials: true
+      })
+    	.then((res) => {
+    		console.log(res.data);
+    	})
+    	.catch((err) => {
+    		console.log(err);
+    	});
+
     if (textBox.current) {
       textBox.current.value = "";
     }

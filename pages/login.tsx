@@ -3,10 +3,12 @@ import styles from "@styles/Login.module.scss";
 import axios from "axios";
 import { useRef, useState } from "react";
 import { useRouter } from "next/router";
+import { useCookies } from 'react-cookie';
 
 const Login = () => {
   const [userId, setUserId] = useState<string>('');
   const [userPwd, setUserPwd] = useState<string>('');
+  const [cookie, setCookie, removeCookie] = useCookies(['info']);
 
   const router = useRouter();
 
@@ -22,13 +24,19 @@ const Login = () => {
     e.preventDefault();
   
     axios
-      .post("http://43.201.117.177:80/login", {
+      .post("https://boazhowmuch.com/login", {
         username: userId,
         password: userPwd,
       })
       .then((res) => {
+        console.log(res.data)
         console.log(res.data.message);
         if (res.data.message == "로그인에 성공하였습니다.") {
+          setCookie('info', { 
+            loggedin: res.data.loggedin, 
+            account_id: res.data.account_id, 
+            username: res.data.username
+          });
           router.push('/chat');
         } else {
           alert(res.data.message);
