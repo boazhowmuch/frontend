@@ -5,26 +5,26 @@ import axios from "axios";
 import { useEffect, useRef, useState } from "react";
 
 const Chat = () => {
-  const [userChat, setUserChat] = useState<string>("");
-  const [chatList, setChatList] = useState<Array<string>>([]);
+  const [chatList, setChatList] = useState<Array<string>>(["안녕하세요. 꽃 사입 계획을 도와드리는 챗봇 How-much 입니다."]);
 
   const textBox = useRef<HTMLInputElement>(null);
   const submitBtn = useRef(null);
 
   const sendChat = (e: any) => {
-    // e.preventDefault();
     let userChat = textBox.current ? textBox.current.value : "";
-    setUserChat(userChat);
     setChatList((prev) => [...prev, userChat]);
 
     axios
     	.post("https://boazhowmuch.com/send_message", {
-    		message: "2023.12.31"
+        account_id: 1,
+        username: 'test',
+    		message: userChat,
     	}, {
         withCredentials: true
       })
     	.then((res) => {
-    		console.log(res.data);
+    		// console.log(res.data.message);
+        setChatList((prev) => [...prev, res.data.message]);
     	})
     	.catch((err) => {
     		console.log(err);
@@ -41,14 +41,6 @@ const Chat = () => {
       sendChat(submitBtn);
     }
   };
-
-  /* 챗봇 답변 추가 */
-  useEffect(() => {
-    let botChat = "안녕하세요. 꽃 사입 계획을 도와드리는 챗봇 How-much 입니다.";
-    let chatArr = [...chatList];
-    chatArr.push(botChat);
-    setChatList(chatArr);
-  }, [userChat]);
 
   /* 채팅 입력 시 스크롤 맨 아래로 */ 
   useEffect(() => {
